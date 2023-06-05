@@ -20,7 +20,7 @@ public class CityDAOImpl implements CityDAO {
             if (city != null) {
                 List<String> employeeNames = city.getEmployees()
                         .stream()
-                        .map(Employee::getFirst_name)
+                        .map(Employee::getFirstName)
                         .collect(Collectors.toList());
                 System.out.println(employeeNames);
                 return employeeNames;
