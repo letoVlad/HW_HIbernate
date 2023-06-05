@@ -2,7 +2,6 @@ package com.example.jdbc_hw.dao;
 
 
 import com.example.jdbc_hw.config.HibernateSessionFactoryUtil;
-import com.example.jdbc_hw.model.City;
 import com.example.jdbc_hw.model.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -57,8 +56,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             if (editEmployee != null) {
                 session.getTransaction().begin();
                 editEmployee.setAge(employee.getAge());
-                editEmployee.setFirst_name(employee.getFirst_name());
-                editEmployee.setLast_name(employee.getLast_name());
+                editEmployee.setFirstName(employee.getFirstName());
+                editEmployee.setLastName(employee.getLastName());
                 editEmployee.setGender(employee.getGender());
                 session.getTransaction().commit();
             }

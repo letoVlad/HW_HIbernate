@@ -18,7 +18,7 @@ public class City {
     private int id;
 
     @Column(name = "city_name")
-    private String city_name;
+    private String cityName;
 
     @JsonIgnore
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -27,9 +27,9 @@ public class City {
     public City() {
     }
 
-    public City(int id, String city_name) {
+    public City(int id, String cityName) {
         this.id = id;
-        this.city_name = city_name;
+        this.cityName = cityName;
     }
 
     public List<Employee> getEmployees() {
@@ -48,11 +48,11 @@ public class City {
         this.id = id;
     }
 
-    public String getCity_name() {
-        return city_name;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCityName(String city_name) {
+        this.cityName = city_name;
     }
 }
