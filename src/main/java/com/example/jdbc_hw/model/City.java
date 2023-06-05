@@ -20,6 +20,7 @@ public class City {
     @Column(name = "city_name")
     private String cityName;
 
+
     @JsonIgnore
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Employee> employees;
