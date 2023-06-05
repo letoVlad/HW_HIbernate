@@ -8,6 +8,7 @@ import java.util.List;
 public interface CityDAO {
     List<String> employeeList(Integer id);
 
+
     //Получение конкретного объекта City по id
     City findByIdCity(Integer id);
 }
